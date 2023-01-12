@@ -9,12 +9,10 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.naveenautomation.Base.TestBase;
-import com.naveenautomation.Pages.AccountCreated;
 import com.naveenautomation.Pages.AccountLoginPage;
 import com.naveenautomation.Pages.HomePage;
 import com.naveenautomation.Pages.MyAccountInformation;
 import com.naveenautomation.Pages.MyAccountPage;
-import com.naveenautomation.Pages.RegisterAccountPage;
 import com.naveenautomation.Utils.ExcelUtils;
 
 public class AccountLoginTest extends TestBase {
@@ -41,12 +39,7 @@ public class AccountLoginTest extends TestBase {
 	@Test(dataProvider = "MyAccountDataProvider")
 	public void verifyEditAccountFieldsArePreFilled(String firstName, String lastName, String email, String telephone,
 			String password, String confirmPassword) {
-		/*
-		 * AccountCreated accountCreated = new AccountCreated(); RegisterAccountPage
-		 * registerAccountPage = homePage.clickRegisterLink();
-		 * registerAccountPage.signUp(firstName, lastName, email, telephone, password,
-		 * confirmPassword); myAccountPage = accountCreated.clickContinueButton();
-		 */
+		
 		AccountLoginPage accountLoginPage = homePage.clickLoginLink();
 		MyAccountPage myAccountPage= accountLoginPage.login(email, password);
 
