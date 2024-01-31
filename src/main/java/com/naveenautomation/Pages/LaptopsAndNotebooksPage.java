@@ -22,10 +22,16 @@ public class LaptopsAndNotebooksPage extends TestBase {
 	// @FindBy(css = "button[onclick*='wishlist.add('47"]
 	@FindBy(css = "#content>div:nth-of-type(4)>div:first-of-type button:nth-of-type(2)")
 	WebElement firstProductAddToWishlistButton;
+	
+	@FindBy(css="#content>div:nth-of-type(4)>div:first-of-type button:nth-of-type(1)")
+	WebElement firstProductAddToCartButton;
 
 	@FindBy(css = "#content>div:nth-of-type(4)>div:nth-of-type(2) button:nth-of-type(2)")
 	WebElement secondProductAddToWishlistButton;
 
+	@FindBy(css = "#content>div:nth-of-type(4)>div:nth-of-type(2) button:nth-of-type(1)")
+	WebElement secondProductAddToCartButton;
+	
 	@FindBy(css = "#content>div:nth-of-type(4)>div:nth-of-type(3) button:nth-of-type(2)")
 	WebElement thirdproductAddToWishlistButton;
 
@@ -40,6 +46,12 @@ public class LaptopsAndNotebooksPage extends TestBase {
 
 	@FindBy(css = "ul.list-inline>li:nth-of-type(3) span")
 	WebElement wishListLink;
+	
+	@FindBy(css="button[data-toggle='dropdown']")
+	WebElement addToCartDropdownLink;
+	
+	@FindBy(xpath = "//a[@title='Checkout']")
+	WebElement checkOutLink;
 
 	public String getLaptopsAndNotebooksHeadingText() {
 		return laptopsAndNotebboksText.getText();
@@ -66,7 +78,18 @@ public class LaptopsAndNotebooksPage extends TestBase {
 			e.printStackTrace();
 		}
 	}
+	
+	public void addToCartFirstLaptop() {
+		firstProductAddToCartButton.click();
+	}
 
+	public void addToCartSecondLaptop() {
+		secondProductAddToCartButton.click();
+	}
+
+	public void clickOnCheckOutLink() {
+		checkOutLink.click();
+	}
 	public String getTextFromSuccesBanner() {
 		return successBanner.getText();
 	}

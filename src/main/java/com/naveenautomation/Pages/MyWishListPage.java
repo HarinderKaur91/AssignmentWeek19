@@ -20,6 +20,13 @@ public class MyWishListPage extends TestBase {
 	@FindBy(css = "div.alert-success")
 	WebElement successBannerAfterDelete;
 
+	@FindBy(css = "div.buttons.clearfix a")
+	WebElement continueBtn;
+	
+	public void clickOnContinueBtn() {
+		continueBtn.click();
+	}
+
 	public WebElement getElementFromTheTable(String productName, WishList column) {
 
 		int columnIndex = getIndexForColumn(column);

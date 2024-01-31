@@ -28,7 +28,6 @@ public class CustomListener extends TestBase implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		logger.error("Test execution failed and taking screen shot: " + result.getName());
-		
 		Utils.takeScreenshot(result.getName());
 	}
 

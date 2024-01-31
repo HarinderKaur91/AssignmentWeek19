@@ -28,8 +28,21 @@ public class LaptopsAndNotebooksTest extends TestBase {
 		accountLoginPage = new AccountLoginPage();
 		myAccountPage = new MyAccountPage();
 		homePage.clickLoginLink();
-		accountLoginPage.login("harinder21@gmail.com", "Password1");
+		accountLoginPage.login("harinder@gmail.com", "Password1");
 
+	}
+
+	@Test
+	public void validAddToCartFunctionality() {
+		myAccountPage.hoverOnLaptopAndNotebooks();
+		LaptopsAndNotebooksPage laptopsAndNotebooksPage = myAccountPage.clickShowAllLaptops();
+
+		// Selecting sorting technique
+		laptopsAndNotebooksPage.selectSortingMethodFromDropDown();
+
+		// Adding products to the cart
+		laptopsAndNotebooksPage.addToCartFirstLaptop();
+		laptopsAndNotebooksPage.addToCartSecondLaptop();
 	}
 
 	@Test
@@ -37,28 +50,30 @@ public class LaptopsAndNotebooksTest extends TestBase {
 
 		myAccountPage.hoverOnLaptopAndNotebooks();
 		LaptopsAndNotebooksPage laptopsAndNotebooksPage = myAccountPage.clickShowAllLaptops();
-		
-		//Selecting sorting technique
+
+		// Selecting sorting technique
 		laptopsAndNotebooksPage.selectSortingMethodFromDropDown();
-		
-		//Adding products to the wishlist
+
+		// Adding products to the wishlist
 		laptopsAndNotebooksPage.addToWishlistFirstLaptop();
 		laptopsAndNotebooksPage.addToWishlistSecondLaptop();
 		laptopsAndNotebooksPage.addToWishlistThirdLaptop();
-		
-		//Validating success banner
+
+		// Validating success banner
 		softAssert.assertEquals(laptopsAndNotebooksPage.getTextFromSuccesBanner(),
-				"Success: You have added "+laptopsAndNotebooksPage.getProductNameInSuccessBanner()+ " to your "+laptopsAndNotebooksPage.getWishListInSuccessBanner()+"!\n×", "Text on success banner doesn't match");
-		
-		//Validating heading text of laptops page
+				"Success: You have added " + laptopsAndNotebooksPage.getProductNameInSuccessBanner() + " to your "
+						+ laptopsAndNotebooksPage.getWishListInSuccessBanner() + "!\n×",
+				"Text on success banner doesn't match");
+
+		// Validating heading text of laptops page
 		softAssert.assertEquals(laptopsAndNotebooksPage.getLaptopsAndNotebooksHeadingText(), "Laptops & Notebooks",
 				"Text doesn't match");
-		
-		//Validating title of laptops page
+
+		// Validating title of laptops page
 		softAssert.assertEquals(driver.getTitle(), "Laptops & Notebooks", "Title doesn't match");
 		laptopsAndNotebooksPage.clickWishlistLink();
 		softAssert.assertAll();
-	
+
 	}
 
 	@AfterMethod

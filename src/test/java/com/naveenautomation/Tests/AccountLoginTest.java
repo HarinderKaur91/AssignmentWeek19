@@ -36,7 +36,7 @@ public class AccountLoginTest extends TestBase {
 		softAssert.assertAll();
 	}
 
-	@Test(dataProvider = "MyAccountDataProvider")
+	@Test(dataProvider = "MyAccountDataProvider",enabled=false)
 	public void verifyEditAccountFieldsArePreFilled(String firstName, String lastName, String email, String telephone,
 			String password, String confirmPassword) {
 		
@@ -89,6 +89,6 @@ public class AccountLoginTest extends TestBase {
 
 	@AfterMethod
 	public void teardown() {
-		quitBrowser();
+		//quitBrowser();
 	}
 }

@@ -17,9 +17,10 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 //import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+
 public class ExtentReportListener extends TestListenerAdapter {
 
-	public ExtentSparkReporter htmlReporter;
+	public ExtentSparkReporter reporter;
 	public ExtentTest test;
 	public ExtentReports extent;
 
@@ -32,30 +33,32 @@ public class ExtentReportListener extends TestListenerAdapter {
 		String repName = "Extent_Report_" + timeStamp + ".html";
 
 		// Defines the location of extent report
-		htmlReporter = new ExtentSparkReporter("./Extent Report/" + repName);
+		reporter = new ExtentSparkReporter("./Extent Report/" + repName);
 
 		// Loading the config XML
 		try {
-			htmlReporter.loadXMLConfig("./extent-config.xml");
+			reporter.loadXMLConfig("./extent-config.xml");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		// COnfiguration settings of the report
-		htmlReporter.config().setReportName("Regression Suite");
-		htmlReporter.config().setTheme(Theme.DARK);
-		htmlReporter.config().setDocumentTitle("Extent Report");
-		htmlReporter.config().setTimelineEnabled(true);		
+		reporter.config().setReportName("Regression Suite");
+		reporter.config().setTheme(Theme.DARK);
+		reporter.config().setDocumentTitle("Extent Report");
+		reporter.config().setTimelineEnabled(true);	
+		reporter.config().setTimeStampFormat(timeStamp);
 
 		extent = new ExtentReports();
 
 		// connecting report with test methods
-		extent.attachReporter(htmlReporter);
+		extent.attachReporter(reporter);
 		
 		extent.setSystemInfo("Name of the host", "Localhost");
 		extent.setSystemInfo("Tester Name", "Harinder");
 		extent.setSystemInfo("Env", "Prod");// environment could be production,dev or stage
+		
 
 	}
 

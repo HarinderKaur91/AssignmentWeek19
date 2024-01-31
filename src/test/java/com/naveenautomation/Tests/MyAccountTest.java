@@ -9,6 +9,7 @@ import com.naveenautomation.Pages.AccountLoginPage;
 import com.naveenautomation.Pages.HomePage;
 import com.naveenautomation.Pages.MyAccountInformation;
 import com.naveenautomation.Pages.MyAccountPage;
+import com.naveenautomation.Pages.NewsletterSubscriptionPage;
 
 public class MyAccountTest extends TestBase {
 
@@ -39,6 +40,16 @@ public class MyAccountTest extends TestBase {
 		myAccountInformation.updateTelephone("780298456");
 		softAssert.assertEquals(myAccountPage.getTelephoneChangeSuccessMessage(),
 				"Success: Your account has been successfully updated.", "Telephone update failed");
+		softAssert.assertEquals(driver.getTitle(), "My Account", "Failed to naviagte back to my account page");
+		;
+	}
+
+	@Test
+	public void verifyAlertBannerForNewsletterSubscription() {
+		NewsletterSubscriptionPage newsletterSubscriptionPage = myAccountPage.clicksubscribeUnsubscribeLink();
+		newsletterSubscriptionPage.clickContinueButton("Yes");
+		softAssert.assertEquals(myAccountPage.getsubscribeAlertSuccessMessage(),
+				" Success: Your newsletter subscription has been successfully updated!", "Subscription update failed");
 		softAssert.assertEquals(driver.getTitle(), "My Account", "Failed to naviagte back to my account page");
 		;
 	}

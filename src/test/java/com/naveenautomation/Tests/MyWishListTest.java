@@ -28,7 +28,7 @@ public class MyWishListTest extends TestBase {
 		laptopsAndNotebooksPage = new LaptopsAndNotebooksPage();
 		accountLoginPage = new AccountLoginPage();
 		homePage.clickLoginLink();
-		accountLoginPage.login("harinder21@gmail.com", "Password1");
+		accountLoginPage.login("harinder@gmail.com", "Password1");
 		myWishListPage = laptopsAndNotebooksPage.clickWishlistLink();
 	}
 

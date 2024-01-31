@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
-	public Browsers DEFAULT_BROWSER = Browsers.GOOGLE_CHROME;
+	public Browsers DEFAULT_BROWSER = Browsers.EDGE;
 
 	// EventFiringWebDriver is a wrapper around an arbitrary WebDriver instance
 	// which supports registering of a WebDriverEventListener, e.g. for logging
@@ -67,7 +67,7 @@ public class TestBase {
 
 	public void quitBrowser() {
 		// closing the browser
-		//driver.quit();
+		driver.close();
 	}
 
 }
