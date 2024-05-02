@@ -1,233 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-11T19:09:15 GMT-07:00" name="Default suite" finished-at="2023-01-11T19:09:51 GMT-07:00" duration-ms="36368">
+  <suite started-at="2024-02-02T23:35:27 MST" name="Default suite" finished-at="2024-02-02T23:35:37 MST" duration-ms="10062">
     <groups>
     </groups>
-    <test started-at="2023-01-11T19:09:15 GMT-07:00" name="Default test" finished-at="2023-01-11T19:09:51 GMT-07:00" duration-ms="36368">
-      <class name="com.naveenautomation.Tests.AccountLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:19 GMT-07:00" name="setUp" finished-at="2023-01-11T19:09:25 GMT-07:00" duration-ms="6249" status="PASS">
+    <test started-at="2024-02-02T23:35:27 MST" name="Default test" finished-at="2024-02-02T23:35:37 MST" duration-ms="10062">
+      <class name="com.naveenautomation.Tests.MyWishListTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.naveenautomation.Tests.MyWishListTest@19e4653c]" started-at="2024-02-02T23:35:27 MST" name="setUp" finished-at="2024-02-02T23:35:36 MST" duration-ms="9420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyEditAccountFieldsArePreFilled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:25 GMT-07:00" name="verifyEditAccountFieldsArePreFilled" data-provider="RegisterDataProvider" finished-at="2023-01-11T19:09:28 GMT-07:00" duration-ms="2487" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Harinder]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kaur]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[harinder15@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[7802980981]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password2]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password2]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyModifyBannerAfterDelete()[pri:3, instance:com.naveenautomation.Tests.MyWishListTest@19e4653c]" started-at="2024-02-02T23:35:36 MST" name="verifyModifyBannerAfterDelete" finished-at="2024-02-02T23:35:37 MST" duration-ms="248" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because the return value of "com.naveenautomation.Pages.MyWishListPage.getElementFromTheTable(String, com.naveenautomation.Pages.MyWishListPage$WishList)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because the return value of "com.naveenautomation.Pages.MyWishListPage.getElementFromTheTable(String, com.naveenautomation.Pages.MyWishListPage$WishList)" is null
+at com.naveenautomation.Pages.MyWishListPage.deleteProductInWishList(MyWishListPage.java:86)
+at com.naveenautomation.Tests.MyWishListTest.verifyModifyBannerAfterDelete(MyWishListTest.java:69)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyEditAccountFieldsArePreFilled -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:28 GMT-07:00" name="teardown" finished-at="2023-01-11T19:09:28 GMT-07:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:28 GMT-07:00" name="setUp" finished-at="2023-01-11T19:09:31 GMT-07:00" duration-ms="3568" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyEditAccountFieldsArePreFilled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:31 GMT-07:00" name="verifyEditAccountFieldsArePreFilled" data-provider="RegisterDataProvider" finished-at="2023-01-11T19:09:34 GMT-07:00" duration-ms="2457" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Navjot]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Singh]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Navjot.rehal15@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[7802561458]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Navjot13]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Navjot13]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEditAccountFieldsArePreFilled -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:34 GMT-07:00" name="teardown" finished-at="2023-01-11T19:09:34 GMT-07:00" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyModifyBannerAfterDelete -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.naveenautomation.Tests.MyWishListTest@19e4653c]" started-at="2024-02-02T23:35:37 MST" name="teardown" finished-at="2024-02-02T23:35:37 MST" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:34 GMT-07:00" name="setUp" finished-at="2023-01-11T19:09:37 GMT-07:00" duration-ms="3311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyEditAccountFieldsArePreFilled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:37 GMT-07:00" name="verifyEditAccountFieldsArePreFilled" data-provider="RegisterDataProvider" finished-at="2023-01-11T19:09:39 GMT-07:00" duration-ms="2434" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sahib]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Singh]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sg15@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[5041526585]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Admin@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEditAccountFieldsArePreFilled -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:39 GMT-07:00" name="teardown" finished-at="2023-01-11T19:09:39 GMT-07:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:39 GMT-07:00" name="setUp" finished-at="2023-01-11T19:09:43 GMT-07:00" duration-ms="3801" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyEditAccountFieldsArePreFilled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:43 GMT-07:00" name="verifyEditAccountFieldsArePreFilled" data-provider="RegisterDataProvider" finished-at="2023-01-11T19:09:45 GMT-07:00" duration-ms="2374" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Neethu]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Unnikrishnan]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[neethu15@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4520146523]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[password@01]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[password@01]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEditAccountFieldsArePreFilled -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:45 GMT-07:00" name="teardown" finished-at="2023-01-11T19:09:45 GMT-07:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:45 GMT-07:00" name="setUp" finished-at="2023-01-11T19:09:49 GMT-07:00" duration-ms="3518" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyEditAccountFieldsArePreFilled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:49 GMT-07:00" name="verifyEditAccountFieldsArePreFilled" data-provider="RegisterDataProvider" finished-at="2023-01-11T19:09:51 GMT-07:00" duration-ms="2213" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Swaroop]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Krishna]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[iron.man15@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[5410235986]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password2]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEditAccountFieldsArePreFilled -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.naveenautomation.Tests.AccountLoginTest@742ff096]" started-at="2023-01-11T19:09:51 GMT-07:00" name="teardown" finished-at="2023-01-11T19:09:51 GMT-07:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.naveenautomation.Tests.AccountLoginTest -->
+      </class> <!-- com.naveenautomation.Tests.MyWishListTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

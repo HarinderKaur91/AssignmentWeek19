@@ -15,6 +15,7 @@
 	<test thread-count="5" name="Test">
 
 		<classes>
+			<class name="com.naveenautomation.Tests.AccountLoginTest" />
 			<class name="com.naveenautomation.Tests.MyAccountTest" />
 			<class name="com.naveenautomation.Tests.MyWishListTest" />
 

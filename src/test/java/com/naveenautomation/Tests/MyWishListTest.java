@@ -66,7 +66,7 @@ public class MyWishListTest extends TestBase {
 	@Test(priority = 3)
 	public void verifyModifyBannerAfterDelete() {
 		// Deleting last product and validating delete banner success
-		myWishListPage.deleteProductInWishList("MacBook Pro",WishList.ACTION,By.cssSelector("a"));
+		myWishListPage.deleteProductInWishList("MacBook Pro", WishList.ACTION, By.cssSelector("a"));
 		softAssert.assertEquals(myWishListPage.getTextFromSuccessBannerAfterDelete(),
 				"Success: You have modified your wish list!\n×", "Element not deleted");
 		softAssert.assertAll();

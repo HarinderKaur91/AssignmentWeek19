@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.naveenautomation.Tests.AccountLoginTest">
+      <class name="com.naveenautomation.Tests.MyWishListTest">
         <methods>
           <include name="teardown"/>
-          <include name="verifyEditAccountFieldsArePreFilled" invocation-numbers="2 3 4"/>
           <include name="setUp"/>
+          <include name="verifyModifyBannerAfterDelete"/>
         </methods>
-      </class> <!-- com.naveenautomation.Tests.AccountLoginTest -->
+      </class> <!-- com.naveenautomation.Tests.MyWishListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

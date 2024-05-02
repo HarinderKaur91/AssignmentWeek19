@@ -35,7 +35,7 @@ public class CheckOutTest extends TestBase{
 	@Test
 	public void validateBillingDetails() {
 		checkOutPage.fillBillingDetails("harinder", "kaur", "2232", "edmonton","T6T0Z1", "Canada", "Alberta");
-		softAssert.assertEquals(myAccountPage.getMyAccountText(), "My Account", "Login Failed");
+				softAssert.assertEquals(myAccountPage.getMyAccountText(), "My Account", "Login Failed");
 		softAssert.assertAll();
 	}
 	

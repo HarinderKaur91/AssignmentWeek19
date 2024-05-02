@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
-	public Browsers DEFAULT_BROWSER = Browsers.EDGE;
+	String DEFAULT_BROWSER = System.getProperty("BROWSER");
 
 	// EventFiringWebDriver is a wrapper around an arbitrary WebDriver instance
 	// which supports registering of a WebDriverEventListener, e.g. for logging
@@ -27,17 +27,17 @@ public class TestBase {
 
 	public void launchBrowser() {
 		switch (DEFAULT_BROWSER) {
-		case GOOGLE_CHROME:
+		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			break;
 
-		case EDGE:
+		case "edge":
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			break;
 
-		case FIREFOX:
+		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			break;

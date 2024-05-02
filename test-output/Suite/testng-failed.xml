@@ -8,6 +8,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.naveenautomation.Tests.MyWishListTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setUp"/>
+          <include name="verifyProductName"/>
+          <include name="verifyProductPrice"/>
+          <include name="verifyModifyBannerAfterDelete"/>
+        </methods>
+      </class> <!-- com.naveenautomation.Tests.MyWishListTest -->
       <class name="com.naveenautomation.Tests.MyAccountTest">
         <methods>
           <include name="tearDown"/>
